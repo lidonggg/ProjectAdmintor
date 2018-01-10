@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/schedule_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="schedule id"/>
+        <TextView
+            android:id="@+id/schedule_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="schedule detail" />
+
+        <TextView
+            android:id="@+id/schedule_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="schedule deadline" />
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/schedule_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="completed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

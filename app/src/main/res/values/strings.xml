@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CANI</string>
+    <string-array name="types">
+        <item>课程设计</item>
+        <item>sitp</item>
+    </string-array>
+    <string-array name="city_names">
+        <item>北京</item>
+        <item>上海</item>
+        <item>深圳</item>
+        <item>成都</item>
+        <item>青岛</item>
+        <item>济南</item>
+        <item>天津</item>
+        <item>南京</item>
+    </string-array>
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#fff7f7f7"
+    >
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:text="用户注册"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_preference_height"
+        android:background="@drawable/ic_preference_first_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/student_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户id"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_preference_height"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/user"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:padding="8dp"
+            />
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:hint="请输入用户名"
+            android:textCursorDrawable="@null"
+            android:textColorHint="@color/gray"
+            />
+        <ImageView
+            android:id="@+id/img_clear_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/search_clear"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_preference_height"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+        <ImageView
+            android:padding="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@mipmap/ic_lock_outline_black_18dp"
+            />
+        <EditText
+            android:id="@+id/user_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_weight="1"
+            android:hint="请输入密码"
+            android:textCursorDrawable="@null"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:textColorHint="@color/gray"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/mTvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击登录"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="14dp"
+        />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        >
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/setting_preference_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="14.0dp"
+            android:layout_marginRight="10.0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/default_btn_blue"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="注册"
+            android:textColor="#ffffffff" />
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/setting_preference_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10.0dp"
+            android:layout_marginRight="14.0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/default_btn_blue"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="清除"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
