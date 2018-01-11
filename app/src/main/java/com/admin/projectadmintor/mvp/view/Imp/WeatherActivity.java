@@ -138,7 +138,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherView, V
                     break;
                 case "nanjing":
                     weatherPresenter.getCitycode("南京");
-                    weatherPresenter.getWeather(cityCode);
+                    //weatherPresenter.getWeather(cityCode);
                     break;
                 default:
                     Toast.makeText(this,"请输入shanghai或者nanjing",Toast.LENGTH_LONG).show();

@@ -14,9 +14,7 @@ import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.Poi;
 
-/**
- * Created by Administrator on 2016/6/20 0020.
- */
+
 public class BaseActivity extends AppCompatActivity {
 
     private LocationService locationService;            //百度地图的定位服务

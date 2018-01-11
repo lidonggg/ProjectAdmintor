@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=getIntent();
         stuid=intent.getStringExtra("studentid");
 
-        Toast.makeText(this,"Welcome "+stuid,Toast.LENGTH_LONG).show();
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

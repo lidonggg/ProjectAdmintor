@@ -51,10 +51,13 @@ public class WeatherModelImpl implements WeatherModel {
         StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                System.out.println(response);
                 JsonObject jsonObject = new JsonParser().parse(response).getAsJsonObject();
-                String cityCode = jsonObject.get("citycode").getAsString();
+                if(jsonObject.get("rcode").getAsInt()==200) {
+                    String cityCode = jsonObject.get("citycode").getAsString();
 
-                listener.onCityCodeSuccess(cityCode);
+                    listener.onCityCodeSuccess(cityCode);
+                }
             }
         }, new Response.ErrorListener() {
             @Override

@@ -76,7 +76,7 @@ public class RecorderActivity extends Activity implements OnClickListener {
         myPlayer = new MediaPlayer();
         initRecorder();
         showRecord = new ShowRecorderAdpter();
-        myRecorder=new MediaRecorder();
+        //myRecorder=new MediaRecorder();
         if (Environment.getExternalStorageState().equals(
                 Environment.MEDIA_MOUNTED)) {
             try {
@@ -165,11 +165,10 @@ public class RecorderActivity extends Activity implements OnClickListener {
 
                 @Override
                 public void onClick(View arg0) {
-                    if (myPlayer.isPlaying()) {
-                        myPlayer.stop();
+                    
                         plays.setVisibility(View.VISIBLE);
                         stop.setText("删除");
-                    } else {
+                   
 
                         Builder build = new Builder(RecorderActivity.this);
                         build.setTitle("是否要删除该条录音？");
@@ -188,7 +187,7 @@ public class RecorderActivity extends Activity implements OnClickListener {
                         });
                         build.setNegativeButton("取消", null);
                         build.show();
-                    }
+                   
                 }
             });
             return views;
@@ -216,9 +215,7 @@ public class RecorderActivity extends Activity implements OnClickListener {
                                     public void onClick(DialogInterface dialog,
                                                         int which) {
                                         String text = filename.getText().toString();
-                                        if(myRecorder==null){
-                                            initRecorder();
-                                        }
+
                                         try {
                                             paths = path
                                                     + "/"
@@ -232,10 +229,13 @@ public class RecorderActivity extends Activity implements OnClickListener {
                                             myRecorder.setOutputFile(saveFilePath
                                                     .getAbsolutePath());
                                             saveFilePath.createNewFile();
-
+                                            if(myRecorder==null) {
+                                                initRecorder();
+                                            }
                                             myRecorder.prepare();
                                             // 开始录音
                                             myRecorder.start();
+
                                             start.setText("正在录音中...");
                                             start.setEnabled(false);
                                             aler.dismiss();
@@ -319,11 +319,11 @@ public class RecorderActivity extends Activity implements OnClickListener {
     }
     private void initRecorder(){
         myRecorder=new MediaRecorder();
-        myRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
+        myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 
-        myRecorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_WB); // 设置输出格式
+        myRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT); // 设置输出格式
 
-        myRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_WB);  // 设置编码格式
+        myRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);  // 设置编码格式
     }
     //设置图片与列表的显示
     private void setTF(boolean tf) {
@@ -354,7 +354,7 @@ public class RecorderActivity extends Activity implements OnClickListener {
             myPlayer.release();
         }
         myPlayer.release();
-        myRecorder.release();
+        //myRecorder.release();
     }
 
 }
